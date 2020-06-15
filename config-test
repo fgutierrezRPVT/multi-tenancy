@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "flux-helm-test"
+  cluster:
+    server: "https://rancher.repdev.cloud/k8s/clusters/c-xgrz4"
+- name: "flux-helm-test-ferencvm"
+  cluster:
+    server: "https://209.99.83.233:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TURZeE5URTBORFF5TjFvWERUTXdNRFl4TXpFME5EUXlOMW93RWpFUU1BNEdBM\
+      VVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ\
+      0VCQUtSZGJmTVU5dUxZCm1HcWFBMlBYQ0hFS3dYOU5JY09SZUVTQ1h6Mmo5cFFyeFBMSzd1V0M2d\
+      k9lT1REOWIwVTBaS0w2M3BVUWFSL08KVkYrR3BpSFNjM1I1M01yRklaS1daaTBVaWdXdjlDSk4wW\
+      mFkQmtnUC9TdUpWT2lDd1RLSkszZisxdlIxNjA2cQprZENiNnhBeTQ2My9Gdm1wSXk2UUtwZlRPW\
+      kgwN0c0ZGc1SFpFRlMyNVRkTHM4TXdrRmpUcWMxTnZoOEhhTTA3Cm8vRkFNMjgzUTRWaVhpZzQyR\
+      FdKU3MxQjBhZHNQNnplU3J3S0xoMEIzVEJLbWhWRzJqbm1qeVFITTRtQmE4cGYKMFR2R05wOVZoc\
+      kJrMVdGT3J4Y3dhMU9UcTQ2K3p2R1o1cW1PMVZFRzg3S1UvV1NtM1BIV01MdjU0bjlnVldSaQpDS\
+      DJXaGtSMlNnY0NBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBQlF4aEpMSTlqZTY4aWRHSEs0TmJwe\
+      mNOUll4czJRa2RZa2oKVTFKU1NpcldxS3NqUERIeWJSQ1NiMDhpQjdNakxnVVNWcjA4aHAwM0g2T\
+      VZiMUhqUUtBN0N4L0hoaDN6YVBmMQphYTNsNmVYeFlPbXFiSE04cjA4Q1NHaU5IYXNYYVNidzgre\
+      k82TDZ5YnljWWN2MGVQdW51RzdPZk9xWUJ0TGV1CjZ1S2JxeUJ4VFVzZXh3SElxaGU5ZVY0Q3VDT\
+      1FxZUR6aXd0amNBbmtzYVlLdjQwVWJKdXFWd210b3VDK0FaakMKb203cTdHQ0x5eTB6Tmt2U3NqU\
+      HgxMllYT1dldlNpa0xPd0JwUmViZmd2OW1wNThtQTcyS2Y1M0VvbXMrQ3E5NgphUlB4RnJ0cjhRQ\
+      XFrcFNsWkQ5MWtiOVJWLy9NUzYyWkJDSFB0Rzcwb0ZLdVpWU1N4cjg9Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+
+users:
+- name: "flux-helm-test"
+  user:
+    token: "kubeconfig-u-w69f6.c-xgrz4:vskcdhrv98wlkgh5tk2f5rpmgxzs75qgcr2j845dlkd2xgf2sj6wf7"
+
+contexts:
+- name: "flux-helm-test"
+  context:
+    user: "flux-helm-test"
+    cluster: "flux-helm-test"
+- name: "flux-helm-test-ferencvm"
+  context:
+    user: "flux-helm-test"
+    cluster: "flux-helm-test-ferencvm"
+
+current-context: "flux-helm-test"
